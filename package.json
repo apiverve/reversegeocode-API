@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/reversegeocode",
+  "version": "1.0.0",
+  "description": "Reverse Geocode is a simple tool for getting the location of a set of coordinates. Only supports USA and Canada Coordinates. It returns the city, state, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/reversegeocode-API.git"
+  },
+  "keywords": [
+    "reverse geocode"," reverse geocode api"," reverse geocode tool"," reverse geocode software"," reverse geocode service"," reverse geocode library"," reverse geocode sdk"," reverse geocode code"," reverse geocode script"," reverse geocode program"," reverse geocode application"," reverse geocode app"," reverse geocode utility"," reverse geocode helper"," reverse geocode helper tool"," reverse geocode helper software"," reverse geocode helper service"," reverse geocode helper library"," reverse geocode helper sdk"," reverse geocode helper code"," reverse geocode helper script"," reverse geocode helper program"," reverse geocode helper application"," reverse geocode helper app"," reverse geocode helper tool"," reverse geocode helper utility"," reverse geocode helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/reversegeocode-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/reversegeocode-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
