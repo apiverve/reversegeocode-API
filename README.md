@@ -5,6 +5,7 @@ Reverse Geocode is a simple tool for getting the location of a set of coordinate
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
+![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
 This is a Javascript Wrapper for the [Reverse Geocode API](https://apiverve.com/marketplace/api/reversegeocode)
 
@@ -48,7 +49,7 @@ Using the API client, you can perform requests to the API.
 ```
 var query = {
   lat: 40.714224,
-  long: -73.961452
+  lon: -73.961452
 };
 ```
 
@@ -110,7 +111,7 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the mailboxlayer website, API, and services is subject to the [APIVerve Terms & Conditions](https://apiverve.com/terms) and all legal documents and agreements.
+All usage of the mailboxlayer website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms) and all legal documents and agreements.
 
 ---
 
