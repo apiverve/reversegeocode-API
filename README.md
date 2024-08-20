@@ -92,7 +92,8 @@ api.execute(query, function (error, data) {
       "Brooklyn Center",
       "Brooklyn Heights"
     ]
-  }
+  },
+  "code": 200
 }
 ```
 
