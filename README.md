@@ -1,5 +1,4 @@
-Reverse Geocode API
-============
+# Reverse Geocode API
 
 Reverse Geocode is a simple tool for getting the location of a set of coordinates. Only supports USA and Canada Coordinates. It returns the city, state, and more.
 
@@ -7,55 +6,63 @@ Reverse Geocode is a simple tool for getting the location of a set of coordinate
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Javascript Wrapper for the [Reverse Geocode API](https://apiverve.com/marketplace/api/reversegeocode)
+This is a Javascript Wrapper for the [Reverse Geocode API](https://apiverve.com/marketplace/reversegeocode)
 
 ---
 
 ## Installation
-	npm install @apiverve/reversegeocode --save
+
+Using npm:
+```shell
+npm install @apiverve/reversegeocode
+```
+
+Using yarn:
+```shell
+yarn add @apiverve/reversegeocode
+```
 
 ---
 
 ## Configuration
 
-Before using the reversegeocode API client, you have to setup your account and obtain your API Key.  
+Before using the Reverse Geocode API client, you have to setup your account and obtain your API Key.
 You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ---
 
-## Usage
+## Quick Start
 
-The Reverse Geocode API documentation is found here: [https://docs.apiverve.com/api/reversegeocode](https://docs.apiverve.com/api/reversegeocode).  
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+
+The Reverse Geocode API documentation is found here: [https://docs.apiverve.com/ref/reversegeocode](https://docs.apiverve.com/ref/reversegeocode).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
-```
-var reversegeocodeAPI = require('@apiverve/reversegeocode');
-var api = new reversegeocodeAPI({
-    api_key: [YOUR_API_KEY],
-    secure: true //(Optional, defaults to true)
+```javascript
+const reversegeocodeAPI = require('@apiverve/reversegeocode');
+const api = new reversegeocodeAPI({
+    api_key: '[YOUR_API_KEY]'
 });
 ```
 
 ---
 
+## Usage
+
+---
 
 ### Perform Request
-Using the API client, you can perform requests to the API.
 
-###### Define Query
+Using the API is simple. All you have to do is make a request. The API will return a response with the data you requested.
 
-```
+```javascript
 var query = {
   lat: 40.714224,
   lon: -73.961452
 };
-```
 
-###### Simple Request (using Callback)
-
-```
 api.execute(query, function (error, data) {
     if (error) {
         return console.error(error);
@@ -65,9 +72,54 @@ api.execute(query, function (error, data) {
 });
 ```
 
-###### Example Response
+---
 
+### Using Promises
+
+You can also use promises to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+var query = {
+  lat: 40.714224,
+  lon: -73.961452
+};
+
+api.execute(query)
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 ```
+
+---
+
+### Using Async/Await
+
+You can also use async/await to make requests. The API returns a promise that you can use to handle the response.
+
+```javascript
+async function makeRequest() {
+    var query = {
+  lat: 40.714224,
+  lon: -73.961452
+};
+
+    try {
+        const data = await api.execute(query);
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+---
+
+## Example Response
+
+```json
 {
   "status": "ok",
   "error": null,
@@ -76,7 +128,7 @@ api.execute(query, function (error, data) {
     "state_abbr": "NY",
     "city": "Brooklyn",
     "state": "New York",
-    "distance": 0.65017573007586638,
+    "distance": 0.6501757300758664,
     "latitudeClosest": "40.712090",
     "longitudeClosest": "-73.95427",
     "countryCode": "US",
@@ -92,8 +144,7 @@ api.execute(query, function (error, data) {
       "Brooklyn Center",
       "Brooklyn Heights"
     ]
-  },
-  "code": 200
+  }
 }
 ```
 
@@ -106,6 +157,7 @@ Need any assistance? [Get in touch with Customer Support](https://apiverve.com/c
 ---
 
 ## Updates
+
 Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
 
 ---
